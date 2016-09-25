@@ -14,7 +14,7 @@ function addSpiral(image, bgImage) {
     image.width = bgImage.offsetWidth;
     // image.height = image.width / 1.618;
     image.height = bgImage.offsetHeight;
-    image.style["z-index"] = -1;
+    image.style["z-index"] = bgImage.style["z-index"] - 1;
 //    bgImage.style["z-index"] = 1;
 }
 
@@ -31,15 +31,19 @@ arr.forEach(function(x) {
     if (Math.round(10 * x.offsetWidth /  x.offsetHeight) / 10 === Math.round(10 * 1.62)/10) {
         // CHECK THE ELEMENT LIST FOR GOLDEN RECTANGLE DIMENSIONS
         
+        var shadow = Math.round(x.offsetWidth/50);
+        console.log("SHADOW ", shadow);
         // console.log("GOLDEN RATIO!!!");
         
         // ADD BOX SHADOW TO GOLDEN RECTANGLES
-        x.className += x.className ? ' goldenSmall' : 'goldenSmall';
+        x.style["box-shadow"] = "0px 0px "+Math.round(shadow/2)+"px "+Math.round(shadow/4)+"px rgba(255,215,0,0.75)";
+        //x.className += x.className ? ' goldenSmall' : 'goldenSmall';
         
         // CREATE A FIBONACCI SPIRAL IMG
         var image = document.createElement("img");
         image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Fibonacci_spiral.svg/1280px-Fibonacci_spiral.svg.png";
-        image.className = "golden";
+        //image.className = "golden";
+        image.style["box-shadow"] = "0px 0px "+Math.round(shadow*2)+"px "+Math.round(shadow)+"px rgba(255,215,0,0.85)";
         
 //        image.width = x.width;
 //        image.height = x.height;
