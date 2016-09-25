@@ -70,6 +70,9 @@ arr.forEach(function(x) {
         // image.style["top"] = "0px";
         image.style.visibility = "hidden";
         container.appendChild(image);
+        /*
+        document.styleSheets[0].addRule('.goldenSmall::before','content: ""; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Fibonacci_spiral.svg/1280px-Fibonacci_spiral.svg.png); width: '+x.offsetWidth.toString()+'; height: '+x.offsetHeight.toString()+';');
+        */
         
         // TOGGLE THE VISIBILITY OF THE FIB SPIRAL ON MOUSEENTER ELEMENT
         container.onmouseleave = function() {removeSpiral(image, x)};

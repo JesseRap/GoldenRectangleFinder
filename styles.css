@@ -5,3 +5,19 @@
 .goldenSmall {
     /*box-shadow: 0px 0px 8px 5px rgba(255,215,0,0.75);*/
 }
+/*
+.golden::before {
+    display: block;
+    content: "";
+    background-image: url(images/spiral.png);
+}
+
+.goldenSmall::before {
+    display: block;
+    width: auto;
+    height: auto;
+    position: absolute;
+    content: "";
+    background-image: url(images/spiral.png);
+}
+*/
