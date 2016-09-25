@@ -1,4 +1,4 @@
-# GoldenRectangleFinder
+# Golden Rectangle Finder
 Golden Rectangle Chrome Extension
 
 This is a Google Chrome extension which searches the DOM tree for <code><<span>div</span>></code> and <code><<span>img</span>></code> elements whose dimensions correspond roughly to the golden rectangle (width / height ~= 1.62).
